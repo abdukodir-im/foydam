@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foydam — Biznes boshqaruvi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a class="logo" href="#">● Foydam</a>
+    <span class="version">1.0 versiya</span>
+  </header>
+
+  <main class="container">
+
+    <section class="welcome">
+      <p class="eyebrow">BIZNES BOSHQARUVI</p>
+      <h1>Xush kelibsiz!</h1>
+      <p>Biznesingizni bir joydan boshqaring.</p>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card">
+        <span>Mahsulotlar</span>
+        <strong id="productCount">0</strong>
+        <small>Jami mahsulot</small>
+      </article>
+      <article class="stat-card">
+        <span>Ombor qiymati</span>
+        <strong id="stockValue">0 so‘m</strong>
+        <small>Xarid narxi bo‘yicha</small>
+      </article>
+      <article class="stat-card">
+        <span>Taxminiy foyda</span>
+        <strong id="possibleProfit">0 so‘m</strong>
+        <small>Ombordagi mahsulotlar bo‘yicha</small>
+      </article>
+    </section>
+
+    <section class="panel" id="calculator">
+      <div class="section-heading">
+        <p class="eyebrow">FOYDАM TOOLS</p>
+        <h2>Foyda kalkulyatori</h2>
+        <p>Bir dona mahsulotdan qancha foyda qolishini hisoblang.</p>
+      </div>
+
+      <div class="form-grid">
+        <label>Sotuv narxi (so‘m)
+          <input id="sellPrice" type="number" value="150000" min="0">
+        </label>
+        <label>Xarid narxi (so‘m)
+          <input id="buyPrice" type="number" value="70000" min="0">
+        </label>
+        <label>Komissiya (%)
+          <input id="commission" type="number" value="15" min="0" max="100">
+        </label>
+        <label>Logistika (so‘m)
+          <input id="delivery" type="number" value="12000" min="0">
+        </label>
+        <label>Soliq (%)
+          <input id="tax" type="number" value="0" min="0" max="100">
+        </label>
+      </div>
+
+      <button class="main-button" id="calculateButton">Foydani hisoblash</button>
+
+      <div class="result">
+        <span>Bir dona mahsulotdan sof foyda</span>
+        <strong id="profitResult">45 500 so‘m</strong>
+        <p id="marginResult">Marja: 30.3%</p>
+      </div>
+      <p class="hint">Qiymatlarni o‘zingizning shartlaringizga mos kiriting.</p>
+    </section>
+
+    <section class="panel" id="products">
+      <div class="section-heading">
+        <p class="eyebrow">OMBOR</p>
+        <h2>Mahsulotlar</h2>
+        <p>Mahsulotlaringizni qo‘shing va hisobini yuriting.</p>
+      </div>
+
+      <div class="product-form">
+        <label>Mahsulot nomi
+          <input id="productName" type="text" placeholder="Masalan: Telefon g‘ilofi">
+        </label>
+
+        <div class="form-grid">
+          <label>Xarid narxi
+            <input id="productBuy" type="number" min="0" placeholder="30000">
+          </label>
+          <label>Sotuv narxi
+            <input id="productSell" type="number" min="0" placeholder="60000">
+          </label>
+          <label>Miqdori
+            <input id="productStock" type="number" min="0" placeholder="10">
+          </label>
+        </div>
+
+        <button class="main-button" id="addProductButton">+ Mahsulot qo‘shish</button>
+        <p class="hint" id="formMessage"></p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Mahsulot</th>
+              <th>Xarid narxi</th>
+              <th>Sotuv narxi</th>
+              <th>Soni</th>
+              <th>Amal</th>
+            </tr>
+          </thead>
+          <tbody id="productList"></tbody>
+        </table>
+      </div>
+
+      <p class="empty-message" id="emptyMessage">
+        Hozircha mahsulot yo‘q. Birinchi mahsulotingizni qo‘shing.
+      </p>
+    </section>
+
+    <section class="panel" id="about">
+      <p class="eyebrow">FOYDАM</p>
+      <h2>Biznesingiz uchun yagona yordamchi.</h2>
+      <p class="about-text">Bu Foydam loyihasining birinchi sinov versiyasi.</p>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="#">Bosh sahifa</a>
+    <a href="#calculator">Kalkulyator</a>
+    <a href="#products">Ombor</a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
