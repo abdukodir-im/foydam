@@ -1,0 +1,258 @@
+
+:root {
+  --bg: #F2F5F9;
+  --white: #FFFFFF;
+  --blue: #12233B;
+  --yellow: #F5B700;
+  --muted: #5B6B80;
+  --line: #D9E0EA;
+  --red: #D14343;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--blue);
+  font-family: Arial, sans-serif;
+  padding-bottom: 80px;
+}
+
+.header {
+  background: var(--blue);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo::first-letter { color: var(--yellow); }
+
+.version {
+  font-size: 12px;
+  color: #D9E0EA;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.welcome { padding: 25px 0; }
+
+.eyebrow {
+  color: #9B7400;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.welcome h1 {
+  font-size: 32px;
+  margin: 8px 0;
+}
+
+.welcome p { color: var(--muted); }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.stat-card, .panel {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.stat-card span, .stat-card small {
+  display: block;
+  color: var(--muted);
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 22px;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+
+.stat-card small { font-size: 11px; }
+
+.panel { margin-top: 20px; }
+
+.section-heading h2, .panel h2 {
+  font-size: 25px;
+  margin: 8px 0;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+label {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  margin-top: 7px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--bg);
+  color: var(--blue);
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 2px solid var(--yellow);
+  border-color: var(--yellow);
+}
+
+.main-button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 10px;
+  background: var(--yellow);
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main-button:active { transform: scale(0.99); }
+
+.result {
+  background: var(--blue);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.result span {
+  color: #D9E0EA;
+  font-size: 13px;
+}
+
+.result strong {
+  display: block;
+  color: var(--yellow);
+  font-size: 27px;
+  margin-top: 10px;
+  overflow-wrap: anywhere;
+}
+
+.result p {
+  font-size: 13px;
+  color: #D9E0EA;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.product-form { margin-top: 20px; }
+
+.product-form > label { margin-bottom: 14px; }
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 22px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+  font-size: 13px;
+}
+
+th, td {
+  padding: 12px 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+th { color: var(--muted); }
+
+.delete-button {
+  border: 0;
+  border-radius: 7px;
+  padding: 7px 10px;
+  background: #FCE8E8;
+  color: var(--red);
+  cursor: pointer;
+}
+
+.empty-message {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 15px 0;
+}
+
+.about-text {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  background: white;
+  border-top: 1px solid var(--line);
+  padding: 15px 5px;
+  z-index: 10;
+}
+
+.bottom-nav a {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .container { padding: 14px; }
+  .stats { grid-template-columns: 1fr; }
+  .stat-card { padding: 16px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .welcome h1 { font-size: 28px; }
+}
